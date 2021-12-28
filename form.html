@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Next page</title>
+
+    <!-- Manifest and Styles
+	  The manifest file lists all the information about the website in a JSON format und usually resides in the root folder of a web app -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- App Name -->
+    <meta name="application-name" content="Deaf i des?" />
+    <!-- On iOS, you can specify a web application title for the launch icon -->
+    <meta name="apple-mobile-web-app-title" content="Deaf i des?" />
+
+    <!-- Capability -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Hiding Safari User Interface Components in standalone mode-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Starting URL -->
+    <meta name="msapplication-starturl" content="/index.html" />
+
+    <!-- Theme/Display -->
+    <meta name="theme-color" content="#FBFBFB"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Icon for iOS 180x180 -->
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png">
+
+    <!-- Splash Screens for iOS -->
+    <link href="img/apple_splash_2048.png" sizes="2048x2732" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1668.png" sizes="1668x2224" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1536.png" sizes="1536x2048" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1125.png" sizes="1125x2436" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1242.png" sizes="1242x2208" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_750.png" sizes="750x1334" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_640.png" sizes="640x1136" rel="apple-touch-startup-image" />
+
+</head>
+
+<body class="fullscreen" onload="fillButtonText()">
+<input class="button return-button" type=button onclick="parent.location='index.html'" value='Zum Startbildschirm'>
+<input class="button menue-button" type=button onclick="parent.location='settings.html'" value='...'>
+
+<div class="container">
+    <h1 class="title">Kontaktformular</h1>
+
+    <div class="vertical-container">
+        <form class="formStyle" onsubmit="writeLog()">
+            <table>
+                <tr>
+                    <td><label class="formStyle" for="name">Vorname:</label></td>
+                    <td><input class="formStyle" type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label class="formStyle" for="mail">E-Mail:</label></td>
+                    <td><input class="formStyle" type="text" id="mail" name="mail" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p class="formStyle" >Grund der Kontaktaufnahme:</p></td>
+                <tr>
+                    <td><label class="formStyle" for="wrongRule">Fehlerhafte Regel</label></td>
+                    <td><input class="formStyle" type="radio" id="wrongRule" name="reason" value="wrongRule" required></td>
+                </tr>
+                <tr>
+                    <td><label class="formStyle" for="improvements">Verbesserungsvorschläge</label></td>
+                    <td><input class="formStyle" type="radio" id="improvements" name="reason" value="improvements"></td>
+                </tr>
+                <tr>
+                    <td><label class="formStyle" for="bug">Fehler im Programm</label></td>
+                    <td><input class="formStyle" type="radio" id="bug" name="reason" value="bug"></td>
+                </tr>
+                <tr>
+                    <td><label class="formStyle" for="other">Sonstiges</label></td>
+                    <td><input class="formStyle" type="radio" id="other" name="reason" value="other"></td>
+                </tr>
+                <tr>
+                    <td><label class="formStyle" style="display: none" for="rule" id="ruleLabel">Regel:</label></td>
+                    <td><input class="formStyle" type="hidden" id="rule" name="rule"></td>
+                </tr>
+                <tr>
+                    <td><label class="formStyle" style="display: none" for="activity" id="activityLabel">Regel für Aktivität:</label></td>
+                    <td><input class="formStyle" type="hidden" id="activity" name="activity"></td>
+                </tr>
+                <tr>
+                    <td><label class="formStyle" style="display: none" for="county" id="countyLabel">Regel gültig in:</label></td>
+                    <td><input class="formStyle" type="hidden" id="county" name="county"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br /><label class="formStyle" for="message">Nachricht:</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea class="formStyle" id="message" name="message" rows="6" cols="50">Bitte teile uns hier deine Nachricht mit.</textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="button content-button" type="submit" value="Senden"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div id="confirmation"><p>Kontaktformular erfolgreich übermittelt.</p></div></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="js/form.js"></script>
+<script src="js/app.js"></script>
+<script src="js/use_webworker.js"></script>
+<script src="js/use_serviceworker.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

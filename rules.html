@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Gültige Regeln</title>
+
+    <!-- Manifest and Styles
+	  The manifest file lists all the information about the website in a JSON format und usually resides in the root folder of a web app -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- App Name -->
+    <meta name="application-name" content="Deaf i des" />
+    <!-- On iOS, you can specify a web application title for the launch icon -->
+    <meta name="apple-mobile-web-app-title" content="Deaf i des" />
+
+    <!-- Capability -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Hiding Safari User Interface Components in standalone mode-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Starting URL -->
+    <meta name="msapplication-starturl" content="/index.html" />
+
+    <!-- Theme/Display -->
+    <meta name="theme-color" content="#FBFBFB"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Icon for iOS 180x180 -->
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png">
+
+    <!-- Splash Screens for iOS -->
+    <link href="img/apple_splash_2048.png" sizes="2048x2732" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1668.png" sizes="1668x2224" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1536.png" sizes="1536x2048" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1125.png" sizes="1125x2436" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_1242.png" sizes="1242x2208" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_750.png" sizes="750x1334" rel="apple-touch-startup-image" />
+    <link href="img/apple_splash_640.png" sizes="640x1136" rel="apple-touch-startup-image" />
+
+    <!-- General data and icons -->
+    <script type="text/javascript" src="rules_btv.json"></script>
+    <script type="text/javascript" src="rules_rest.json"></script>
+    <script type="text/javascript" src="rules_vie.json"></script>
+    <script src="img/error-mini.png"></script>
+    <link href="img/error-mini.png" rel="error-mini" />
+
+</head>
+<body class="fullscreen" onload="loadRules()">
+<div class="container">
+    <h1 class="title">Regeln</h1>
+    <input class="button return-button" type=button onclick="goBackToActivity()" value='Zurück'>
+    <input class="button menue-button" type=button onclick="parent.location='settings.html'" value='...'>
+
+    <div class="vertical-container">
+        <div class="container-item" id="introMessage"></div>
+        <br />
+        <div class="container-item" id="rules">
+
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/rules.js"></script>
+<script src="js/app.js"></script>
+<script src="js/use_webworker.js"></script>
+<script src="js/use_serviceworker.js"></script>
+<script src="js/main.js"></script>
+<script>
+    let coll = document.getElementsByClassName("collapsible");
+    let i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

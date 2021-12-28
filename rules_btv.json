@@ -1,0 +1,10 @@
+[
+    {"essentials": "FFP2-Masken:Es herrscht FFP2-Masken-Pflicht;Abstandspflicht:Nicht vorgeschrieben, es sind jedoch 2 Meter empfohlen"},
+    {"shopping": "2G:Impfung oder Genesungszertifikat nötig;FFP2-Masken:Es herrscht FFP2-Masken-Pflicht"},
+    {"gastro": "2G:Impfung oder Genesungszertifikat nötig;Sperrstunde:ab 23 Uhr;Kontaktdaten:Es müssen Kontaktdaten erhoben werden;Maximale Personenzahl:Es dürfen maximal 10 Personen zuzüglich minderjährigen Kindern an einem Platz sitzen;Weitere Verbote:Stehgastronomie, Barbetrieb und Apres-Ski sind verboten"},
+    {"hotels": "2G:Impfung oder Genesungszertifikat nötig;Kontaktdaten:Es müssen Kontaktdaten erhoben werden;FFP2-Masken:Es herrscht FFP2-Masken-Pflicht in allen zugänglichen Bereichen"},
+    {"culture": "Reiner Verkaufsmarkt: FFP2-Pflicht, 2G -Nachweis nötig;Weihnachtsmarkt/Kirtag:FFP2-Maskenpflicht, 2G-Nachweis,maximal 300 Personen, Kontaktdaten;Sport:2G-Nachweis,FFP2-Masken in gemeinsam zugänglichen Bereichen, Kontaktdaten müssen erhoben werden;Veranstaltungen: FFP2-Maskenpflicht, 2G-Nachweis erforderlich"},
+    {"medical": "2G:Impfung oder Genesungszertifikat nötig;FFP2-Masken:Es herrscht FFP2-Masken-Pflicht;Kontaktdaten:Es müssen Kontaktdaten erhoben werden;Besucher:In Pflegeeinrichtungen gilt eine Obergrenze von 2 Besuchern pro Tag, in Krankenhäusern 1 Besucher pro Tag"},
+    {"transport": "FFP2-Masken: Es herrscht FFP2-Masken-Pflicht"},
+    {"specialTransports": "2G:Impfung oder Genesungszertifikat nötig;FFP2-Masken: Es herrscht FFP2-Masken-Pflicht"}
+]
